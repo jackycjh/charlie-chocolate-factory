@@ -1,0 +1,18 @@
+{
+  "asset_ids": [
+    "AGHhobo7pVQN5fZWqv3rhdc324ryT7qVTB",
+    "AWo3R89p5REmoSyMWB8AeUmud8456bRxZL",
+    "AJk2Gx5V67S2wNuwTK5hef3TpHunfbjcmX",
+    "oMb2yzA542yQgwn8XtmGefTzBv5NJ2nDjh"
+  ],
+  "contract_url": "http://techmedia-think.hatenablog.com/",
+  "name_short": "HAWSCoin",
+  "name": "MHAWS Coin",
+  "issuer": "Shigeyuki Azuchi",
+  "description": "カラーコインの実験用通貨です。",
+  "description_mime": "text/x-markdown; charset=UTF-8",
+  "type": "Currency",
+  "divisibility": 1,
+  "link_to_website": false,
+  "version": "1.0"
+}
