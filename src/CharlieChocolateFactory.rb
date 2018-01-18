@@ -45,4 +45,19 @@ alice_key = Bitcoin::Key.generate
 bob_key = Bitcoin::Key.generate
 
 # Charlie issues assets
-api.issue_asset(charlie_oa_addr, 10, "Charlie's Golden Ticket", charlie_oa_addr, nil, 'broadcast', 10)
+number_of_golden_ticket = 10
+
+puts "Charlie is issuing " + number_of_golden_ticket.to_s + " exclusive Golden Tickets."
+api.issue_asset(charlie_oa_addr, number_of_golden_ticket, "Charlie's Golden Ticket",
+                charlie_oa_addr, nil, 'broadcast', number_of_golden_ticket)
+
+# Check balance
+balances = api.get_balance(charlie_oa_addr)
+puts balances
+
+balances.each_with_index { |balance, index|
+  assets = balance['assets']
+  assets.each_with_index { |a, i|
+    puts "Charlie now has " + a['amount'].to_s + " assets with ID: " + a['asset_id'].to_s
+  }
+}
